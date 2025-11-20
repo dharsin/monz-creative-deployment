@@ -1,0 +1,88 @@
+.banner-section {
+  background: linear-gradient(to top, rgba(255, 0, 0, 0.85), rgba(0, 0, 0, 0.9));
+  color: white;
+  padding: 80px 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.text-col h1 {
+  font-size: 3.7rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: #ff0000;
+}
+
+.text-col p {
+  font-size: 1.3rem;
+  max-width: 500px;
+}
+
+.form-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 70px;
+}
+
+.enquiry-form {
+  background: rgba(100, 100, 100, 0.048);
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.enquiry-form input{
+  padding: 2opx;
+  background-color: #ffffff;
+}
+
+.enquiry-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.submit-btn {
+  width: 100%;
+  margin-top: 10px;
+  font-weight: 600;
+  background: linear-gradient(to top, rgba(255, 0, 0, 0.85), rgba(190, 1, 1, 0.9));
+}
+
+@media (max-width: 768px) {
+  .text-col h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  .enquiry-form {
+    width: 150%;
+  }
+  .text-col p{
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .enquiry-form {
+    margin-top: 50px;
+    margin-left: -20px;
+  }
+ 
+}
+
+.enquiry-form {
+  animation: floatform 4s ease-in-out infinite;
+}
+
+@keyframes floatform {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+

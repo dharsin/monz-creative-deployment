@@ -1,0 +1,128 @@
+@property --rotate {
+    syntax: "<number>";
+    inherits: true;
+    initial-value: 0;
+  }
+  
+  @property --delayed-rotate {
+    syntax: "<number>";
+    inherits: true;
+    initial-value: 0;
+  }
+  
+  @keyframes scrollAnim {
+    to {
+      --rotate: 1;
+      --delayed-rotate: 1;
+    }
+  }
+  
+  .branches-section {
+    position: relative;
+    height: 500vh;
+    background: #000;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    overflow: hidden;
+  }
+  
+  .branches-heading {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 10;
+  }
+  
+  .branches-heading h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    background: -webkit-linear-gradient(#ff0000, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+  }
+  
+  ul.branches-circle {
+    position: fixed;
+    left: 50%;
+    top: 55%;
+    translate: -50% -50%;
+    display: block;
+    width: 35vmin;
+    height: 35vmin;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-radius: 50%;
+    transform: rotate(calc(var(--rotate) * 360deg));
+    animation: scrollAnim linear;
+    animation-timeline: scroll(nearest block);
+  }
+  
+  ul.branches-circle li {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0 0;
+    text-wrap: nowrap;
+    color: #ff4b4b;
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+  
+  ul.branches-circle li span {
+    display: inline-block;
+    transition: transform 0.2s ease;
+  }
+  
+  ul.branches-circle li:nth-child(1) { rotate: 0deg; }
+  ul.branches-circle li:nth-child(2) { rotate: 18deg; }
+  ul.branches-circle li:nth-child(3) { rotate: 36deg; }
+  ul.branches-circle li:nth-child(4) { rotate: 54deg; }
+  ul.branches-circle li:nth-child(5) { rotate: 72deg; }
+  ul.branches-circle li:nth-child(6) { rotate: 90deg; }
+  ul.branches-circle li:nth-child(7) { rotate: 108deg; }
+  ul.branches-circle li:nth-child(8) { rotate: 126deg; }
+  ul.branches-circle li:nth-child(9) { rotate: 144deg; }
+  ul.branches-circle li:nth-child(10) { rotate: 162deg; }
+  ul.branches-circle li:nth-child(11) { rotate: 180deg; }
+  ul.branches-circle li:nth-child(12) { rotate: 198deg; }
+  ul.branches-circle li:nth-child(13) { rotate: 216deg; }
+  ul.branches-circle li:nth-child(14) { rotate: 234deg; }
+  ul.branches-circle li:nth-child(15) { rotate: 252deg; }
+  ul.branches-circle li:nth-child(16) { rotate: 270deg; }
+  ul.branches-circle li:nth-child(17) { rotate: 288deg; }
+  ul.branches-circle li:nth-child(18) { rotate: 306deg; }
+  ul.branches-circle li:nth-child(19) { rotate: 324deg; }
+  ul.branches-circle li:nth-child(20) { rotate: 342deg; }
+  
+  em {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    font-style: normal;
+    font-size: small;
+    color: #666;
+  }
+  
+  @supports (animation-timeline: scroll()) {
+    em {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .branches-heading h2 {
+      font-size: 2rem;
+    }
+    ul.branches-circle {
+      width: 60vmin;
+      height: 60vmin;
+    }
+    ul.branches-circle li {
+      font-size: 1rem;
+    }
+  }
+  

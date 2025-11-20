@@ -1,0 +1,35 @@
+.start-career-section {
+    background: #0a0a0a;
+    color: #fff;
+    padding: 80px 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.start-career-section h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-left: 50px;
+}
+
+.start-career-section .highlight {
+    color: #ff0000;
+}
+
+
+
+.start-btn:hover {
+    transform: scale(1.1);
+    background: linear-gradient(to right, #b70000, #ff0000);
+}
+
+@media (max-width: 992px) {
+    .start-career-section h2 {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    .start-btn {
+        margin-top: 20px;
+    }
+}

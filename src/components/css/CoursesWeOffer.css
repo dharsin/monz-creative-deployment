@@ -1,0 +1,119 @@
+.courses-section {
+    padding: 80px 50px;
+    text-align: center;
+  }
+  
+  .courses-heading {
+    font-size: 2.8rem;
+    font-weight: 700;
+    position: relative;
+    background: -webkit-linear-gradient(#ff0000, #000000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+  
+  .course-section-title{
+    background: -webkit-linear-gradient(#ff0000, #000000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 30px;
+    font-weight: 700;
+    font-size: 2.5rem;
+  }
+  
+  .courses-swiper {
+    width: 100%;
+    padding-bottom: 50px;
+    padding: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  
+  .course-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    padding-bottom: 20px;
+    padding: 10px;
+    width: 350px;
+   
+   
+  }
+  
+  .course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.445);
+  }
+  
+  .course-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  .course-card h3 {
+    font-size: 1.3rem;
+    padding-bottom: 15px;
+  }
+  
+  
+  
+  .tools-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+    gap: 10px;
+    margin: 10px 15px;
+    overflow: hidden; 
+  }
+  
+  .tools-grid img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+    border-radius: 10px;
+  }
+  
+  .tools-grid img:hover {
+    transform: scale(1.1);
+  }
+  
+  .course-card p {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 10px 0;
+    margin-top: 20px;
+  }
+  
+  .enquire-btn {
+    background: -webkit-linear-gradient(#ff0000, #b90202ab);
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .enquire-btn:hover {
+    background: #000000;
+  }
+  
+  @media (max-width: 1024px) {
+    .courses-swiper {
+      padding: 0 20px;
+    }
+  
+    .swiper-slide {
+      width: 80% !important;
+    }
+  }
+  

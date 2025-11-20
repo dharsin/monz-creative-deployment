@@ -1,0 +1,419 @@
+/*HERO SECTION (LIGHT THEME) */
+   .about-hero-section {
+    background:
+    linear-gradient(
+      to bottom,
+      rgb(0, 0, 0) 0%,      /* fully opaque at top */
+      rgba(0, 0, 0, 0.85) 10%,  /* start fading */
+      rgba(0, 0, 0, 0.49) 30%,     /* fully transparent mid section */
+      rgba(0, 0, 0, 0.299) 70%,     /* still transparent */
+      rgba(0, 0, 0, 0.295) 90%,  /* fade back to white */
+      rgba(0, 0, 0, 0.159) 100%     /* fully opaque bottom */
+    ),
+    url('https://img.freepik.com/free-vector/black-background-with-red-glowing-low-poly-mesh_1017-20215.jpg?semt=ais_hybrid&w=740&q=80')
+    center/cover no-repeat;
+  background-blend-mode: normal;
+    color: #ff0000;
+    padding: 80px 0;
+    font-family: "Poppins", sans-serif;
+    height: 90vh;
+  }
+  
+  .about-hero-section .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0);
+  }
+  
+  .about-hero-section h1 span {
+    color: #ff0019;
+  }
+  
+  .explore-courses-btn {
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(220, 53, 69, 0.2);
+  }
+  
+  .explore-courses-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(220, 53, 69, 0.4);
+  }
+  
+  /*WHO WE ARE SECTION */
+  .who-we-are-section {
+    background-color: #ffffff;
+    padding: 80px 0;
+  }
+  
+  .who-we-are-title {
+    position: relative;
+  }
+  
+  .who-we-are-title::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: #dc3545;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    border-radius: 3px;
+  }
+  
+  .who-we-are-image {
+    width: 90%;
+    border-radius: 16px;
+    transition: transform 0.3s ease;
+  }
+  
+  .who-we-are-image:hover {
+    transform: scale(1.03);
+  }
+  
+  .who-we-are-text {
+    color: #444;
+    line-height: 1.7;
+    font-size: 1.05rem;
+  }
+  
+  /* CORE VALUES SECTION */
+ 
+  
+  .core-values-title {
+    position: relative;
+  }
+  
+  .core-values-title::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: #dc3545;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+  }
+  
+  .core-values-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem 1rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+  }
+  
+  .core-values-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(220, 53, 69, 0.25);
+    border-top: 4px solid #dc3545;
+  }
+
+  /* Vision Section */
+.vision-section {
+  background: linear-gradient(135deg, #000000, #ff0000);
+  border-radius: 20px;
+  overflow: hidden;
+margin-left: 100px;
+margin-right: 100px;
+padding-left: 50px;
+padding-right: 30px;
+}
+
+.vision-content h2 {
+  font-size: 2.2rem;
+}
+
+.vision-content p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.vision-tags {
+  margin-top: 1.5rem;
+}
+
+.tag {
+  background: #fff;
+  color: #111;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  transform: rotate(-2deg);
+  transition: all 0.3s ease;
+}
+
+.tag:nth-child(even) {
+  transform: rotate(3deg);
+}
+
+.tag:hover {
+  background: #ff4d4d;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.tag.highlight {
+  background: #ff4d4d;
+  color: #fff;
+}
+
+.vision-image img {
+  border: 6px solid #fff;
+}
+
+.vision-star {
+  width: 50px;
+  height: 50px;
+  background-image: radial-gradient(#ff6600 4px, transparent 4px);
+  background-size: 12px 12px;
+  opacity: 0.8;
+  transform: rotate(15deg);
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .vision-content {
+    text-align: center;
+  }
+
+  .vision-tags {
+    justify-content: center;
+  }
+}
+
+  
+  /*MISSION SECTION */
+  .mission-section {
+    background: #ffffff;
+    padding: 80px 0;
+  }
+  
+  .mission-title {
+    position: relative;
+  }
+  
+  .mission-title::after {
+    content: "";
+    width: 50px;
+    height: 3px;
+    background: #dc3545;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    border-radius: 2px;
+  }
+  
+  .mission-text {
+    color: #444;
+    line-height: 1.8;
+  }
+  
+  .mission-btn {
+    box-shadow: 0 4px 20px rgba(220, 53, 69, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .mission-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(220, 53, 69, 0.4);
+  }
+  
+  .mission-image {
+    width: 100%;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+  }
+  
+  .mission-image:hover {
+    transform: scale(1.03);
+  }
+  
+  /* ACHIEVEMENTS SECTION */
+  .achievements-section {
+    background:
+    linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,      /* fully opaque at top */
+      rgba(255, 255, 255, 0) 10%,  /* start fading */
+      rgba(0, 0, 0, 0) 30%,     /* fully transparent mid section */
+      rgba(0, 0, 0, 0) 70%,     /* still transparent */
+      rgba(255, 255, 255, 0) 90%,  /* fade back to white */
+      rgba(255, 255, 255, 0) 100%     /* fully opaque bottom */
+    ),
+    url('https://img.freepik.com/premium-vector/modern-presentation-red-abstract-background-vector_181182-39207.jpg')
+    center/cover no-repeat;
+  background-blend-mode: normal;
+    color: #ffffff;
+    padding: 80px 0;
+  }
+
+  .achievements-subtext{
+    color: black;
+    font-size: 1.2rem;
+  }
+  
+.achievements-title{
+  color: black;
+}
+
+  .achievements-title::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: #dc3545;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+  }
+  
+  .achievement-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    
+  }
+  
+  .achievement-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(220, 53, 69, 0.25);
+    border-top: 4px solid #dc3545;
+  }
+  
+ 
+  
+  .achievements-btn {
+    border: 2px solid #dc3545;
+    color: #000000;
+    transition: all 0.3s ease;
+    background-color: #ffffff;
+  }
+  
+  .achievements-btn:hover {
+    background: #dc3545;
+    color: #fff;
+    transform: translateY(-3px);
+  }
+  
+  /*  RESPONSIVE DESIGN */
+  @media (max-width: 768px) {
+    .about-hero-section {
+      min-height: 70vh;
+      text-align: center;
+    }
+  
+    .who-we-are-image,
+    .mission-image {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .core-values-card {
+      margin-bottom: 1.5rem;
+    }
+  
+    h1.display-4 {
+      font-size: 2rem;
+    }
+  }
+
+  /* about training section*/
+
+  .training-section {
+  background: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+.training-title {
+  font-size: 1.9rem;
+}
+
+.training-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.training-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.refuse-card {
+  background: #fff6f6;
+  border-left: 4px solid #dc3545;
+  height: 520px;
+}
+
+.refuse-card ul li {
+  margin-bottom: 1.3rem;
+}
+
+.refuse-card p {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 4px 0 0 25px;
+}
+
+.deliver-card {
+  border: 2px solid #00ffae;
+  border-radius: 12px;
+  background: #f9fff9;
+  position: relative;
+  height: 520px;
+}
+
+.deliver-card ul li {
+  margin-bottom: 1.3rem;
+}
+
+.deliver-card p {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 4px 0 0 25px;
+}
+
+.icon {
+  font-size: 1.2rem;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.corner-badge {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  background: #fff;
+  border: 2px solid #111;
+  border-radius: 6px;
+  padding: 0.3rem 0.5rem;
+  font-weight: 700;
+  color: #dc3545;
+  font-size: 1rem;
+}
+
+
+@media (max-width: 768px) {
+  .training-card {
+    margin-bottom: 1.5rem;
+  }
+
+  .training-title {
+    font-size: 1.5rem;
+  }
+
+  .corner-badge {
+    top: -10px;
+    right: -10px;
+  }
+}

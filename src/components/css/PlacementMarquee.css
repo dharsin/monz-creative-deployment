@@ -1,0 +1,142 @@
+.plecement-marquee-section {
+    background:
+  
+    linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.9) 0%,      /* fully opaque at top */
+      rgba(255, 255, 255, 0.857) 10%,  /* start fading */
+      rgb(255, 255, 255) 30%,     /* fully transparent mid section */
+      rgba(255, 255, 255, 0.861) 70%,     /* still transparent */
+      rgba(255, 255, 255, 0.847) 90%,  /* fade back to white */
+      rgba(255, 255, 255, 0.848) 100%     /* fully opaque bottom */
+    ),
+    url('https://static.vecteezy.com/system/resources/previews/003/410/339/large_2x/white-graph-paper-texture-background-photo.jpg')
+    center/cover no-repeat;
+  background-blend-mode: normal;
+      color: #ffffff;
+  color: #fff;
+  padding: 80px 0;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+}
+
+.students-heading {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 60px;
+}
+
+.students-heading span {
+  color: #ff0000;
+}
+
+.students-marquee {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+  margin-bottom: 40px;
+}
+
+.marquee-group {
+  display: flex;
+  animation: scroll 25s linear infinite;
+}
+
+.marquee-group.reverse {
+  animation: scroll-reverse 25s linear infinite;
+}
+
+.student-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  margin: 0 20px;
+  width: 220px;
+  text-align: center;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  
+  
+  
+}
+
+
+.student-photo {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #000000;
+  margin-bottom: 10px;
+}
+
+.student-info h4 {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 5px;
+  color: black;
+}
+
+.package {
+  color: #6c6c6c;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.company {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: rgb(255, 0, 0);
+}
+
+.company img {
+  height: 30px;
+  width: 50px;
+  filter: brightness(0) invert(1);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.reverse {
+  animation-direction: reverse;
+}
+
+@media (max-width: 768px) {
+  .students-heading {
+    font-size: 2rem;
+  }
+
+  .student-card {
+    width: 160px;
+    padding: 10px;
+  }
+
+  .student-photo {
+    width: 70px;
+    height: 70px;
+  }
+}
