@@ -4,17 +4,13 @@ import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import { Link } from "react-router-dom";
 import { FaQuoteRight } from "react-icons/fa";
 import { AiFillStar } from "react-icons/ai";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-
 import "../homepage.css";
-
 import BranchAccordion from "../components/BranchAccordion";
 import Footer from "../components/Footer";
 
@@ -357,7 +353,7 @@ export default function HomePage() {
           <h2 className="text-center mb-5 fw-bold">Our Creative Courses</h2>
           <Swiper
             modules={[Navigation]}
-            spaceBetween={30}
+            spaceBetween={20}
             slidesPerView={3}
             navigation
             loop={true}
@@ -367,7 +363,6 @@ export default function HomePage() {
               992: { slidesPerView: 3 },
             }}
           >
-            {/* === VFX & Animation === */}
             <SwiperSlide>
               <div className="course-card">
                 <img
@@ -388,7 +383,6 @@ export default function HomePage() {
               </div>
             </SwiperSlide>
 
-            {/* === AR / VR Design === */}
             <SwiperSlide>
               <div className="course-card">
                 <img
@@ -494,7 +488,7 @@ export default function HomePage() {
                 <h3>Master in Digital Marketing</h3>
                 <div className="tools">
                   {[
-                 
+                       "/tools/ps.png",
                   ].map((src, i) => (
                     <img key={i} src={src} alt={`Tool ${i + 1}`} />
                   ))}
