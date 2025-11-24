@@ -313,7 +313,7 @@
   color: #fff;
   padding: 100px 0;
   background: #0b0b0b;
-  background-image: url("https://4kwallpapers.com/images/wallpapers/batman-red-5120x2880-19038.jpg");
+  background-image: url("../public/images/homepage/home-why-bg.webp");
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -409,11 +409,12 @@
   text-align: center;
   transition: transform 0.3s ease;
   height: 120%;
-  
 }
 
-.course-card h3{
-  font-size: 1.4rem;
+.course-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
 .course-card:hover {
@@ -434,7 +435,7 @@
   gap: 10px;
   flex-wrap: wrap;
   margin-bottom: 10px;
-  min-height: 7rem;
+  min-height: 8rem;
 }
 
 .tools img {
@@ -533,7 +534,7 @@
   position: relative;
   padding: 100px 20px;
   text-align: center;
-  background-image: url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1920&q=80");
+  background-image: url("../public/images/homepage/testimonialbg.webp");
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -668,7 +669,7 @@
 /* branch accordian */
 
 .branch-accordion {
-  background-image: url("https://img.freepik.com/free-vector/simple-blank-red-background-business_53876-115949.jpg?semt=ais_hybrid&w=740&q=80");
+  background-image: url("../public/images/homepage/branchbg.webp");
   background-attachment: fixed; /* parallax effect */
   background-size: cover;
   background-position: center;
@@ -705,6 +706,7 @@
   flex-wrap: wrap;
   gap: 12px;
   margin-bottom: 20px;
+  justify-content: center;
 }
 
 .state-tabs button,
@@ -847,4 +849,3 @@
     gap: 15px;
   }
 }
-      
