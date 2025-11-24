@@ -10,7 +10,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+
 import "../homepage.css";
+
 import BranchAccordion from "../components/BranchAccordion";
 import Footer from "../components/Footer";
 
@@ -36,7 +38,7 @@ export default function HomePage() {
     "/companies-logo/9.svg",
     "/companies-logo/10.svg"
   ];
-
+ 
   const bottomLogos = [
     "/companies-logo/21.svg",
     "/companies-logo/22.svg",
@@ -48,7 +50,6 @@ export default function HomePage() {
     "/companies-logo/16.svg",
     "/companies-logo/17.svg",
     "/companies-logo/20.svg"
-
   ];
 
   return (
@@ -60,7 +61,7 @@ export default function HomePage() {
               <Link
                 to="/"
                 className="navbar-logo d-flex align-items-center text-decoration-none"
-              >
+              >  
                 <img
                   src="https://monzcreativeschool.com/assets/images/logo/monz-creative-school.png"
                   alt="Logo"
@@ -176,7 +177,7 @@ export default function HomePage() {
       <section className="about-section">
         <motion.video
           className="about-bg-video"
-          src="/aboutbgvideo.mp4"
+          src="/aboutvideobg2.mp4"
           autoPlay
           muted
           loop
@@ -348,12 +349,13 @@ export default function HomePage() {
           </Row>
         </Container>
       </section>
+
       <section className="creative-courses py-5">
         <Container>
           <h2 className="text-center mb-5 fw-bold">Our Creative Courses</h2>
           <Swiper
             modules={[Navigation]}
-            spaceBetween={20}
+            spaceBetween={30}
             slidesPerView={3}
             navigation
             loop={true}
@@ -363,17 +365,30 @@ export default function HomePage() {
               992: { slidesPerView: 3 },
             }}
           >
+            {/* === VFX & Animation === */}
             <SwiperSlide>
               <div className="course-card">
                 <img
-                  src="https://monzcreativeschool.com/assets/images/banner/popular-courses/vfx.png"
+                  src="/images/homepage/course-card-image/vfx.webp"
                   alt="VFX & Animation"
                   className="course-img"
                 />
                 <h3>Master in VFX</h3>
                 <div className="tools">
                   {[
-              
+                           "/tools/ps.png",
+                           "/tools/blender.png",
+                           "/tools/m.png",
+                           "/tools/ae.png",
+                           "/tools/au.png",
+                           "/tools/s.png",
+                           "/tools/u.png",
+                           "/tools/marmost.png",
+                           "/tools/color-m.png",
+                           "/tools/houdini.png",
+                           "/tools/nuke.png",
+                           "/tools/davinci.png",   
+                           "/tools/z.png",
                   ].map((src, i) => (
                     <img key={i} src={src} alt={`Tool ${i + 1}`} />
                   ))}
@@ -383,10 +398,11 @@ export default function HomePage() {
               </div>
             </SwiperSlide>
 
+            {/* === AR / VR Design === */}
             <SwiperSlide>
               <div className="course-card">
                 <img
-                  src="https://monzcreativeschool.com/assets/images/banner/popular-courses/graphic-design.png"
+                  src="/images/homepage/course-card-image/graphic-design.webp"
                   alt="AR / VR Design"
                   className="course-img"
                 />
@@ -416,7 +432,7 @@ export default function HomePage() {
             <SwiperSlide>
               <div className="course-card">
                 <img
-                  src="https://monzcreativeschool.com/assets/images/banner/popular-courses/motion-graphic.png"
+                       src="/images/homepage/course-card-image/uiux.webp"
                   alt="Multimedia & Motion Graphics"
                   className="course-img"
                 />
@@ -453,7 +469,7 @@ export default function HomePage() {
             <SwiperSlide>
               <div className="course-card">
                 <img
-                  src="https://monzcreativeschool.com/assets/images/banner/popular-courses/graphic-design.png"
+                  src="/images/homepage/course-card-image/game.webp"
                   alt="Multimedia & Motion Graphics"
                   className="course-img"
                 />
@@ -481,14 +497,20 @@ export default function HomePage() {
             <SwiperSlide>
               <div className="course-card">
                 <img
-                  src="https://monzcreativeschool.com/assets/images/banner/popular-courses/graphic-design.png"
+              src="/images/homepage/course-card-image/digital.webp"
                   alt="Multimedia & Motion Graphics"
                   className="course-img"
                 />
                 <h3>Master in Digital Marketing</h3>
                 <div className="tools">
                   {[
-                       "/tools/ps.png",
+                  "/tools/blender.png",
+                         "/tools/ps.png",
+                         "/tools/google-ads.png",
+                         "/tools/meta.png",
+                        
+                         "/tools/hubspot.png",
+                      
                   ].map((src, i) => (
                     <img key={i} src={src} alt={`Tool ${i + 1}`} />
                   ))}
@@ -503,14 +525,14 @@ export default function HomePage() {
             <SwiperSlide>
               <div className="course-card">
                 <img
-                  src="https://monzcreativeschool.com/assets/images/banner/popular-courses/graphic-design.png"
+                 src="/images/homepage/course-card-image/sap.webp"
                   alt="Multimedia & Motion Graphics"
                   className="course-img"
                 />
                 <h3>Master in SAP</h3>
                 <div className="tools">
                   {[
-                  
+                  "/tools/sap.png",
                   ].map((src, i) => (
                     <img key={i} src={src} alt={`Tool ${i + 1}`} />
                   ))}
@@ -524,7 +546,7 @@ export default function HomePage() {
             <SwiperSlide>
               <div className="course-card">
                 <img
-                  src="https://monzcreativeschool.com/assets/images/banner/popular-courses/graphic-design.png"
+                   src="/images/homepage/course-card-image/digital.webp"
                   alt="Multimedia & Motion Graphics"
                   className="course-img"
                 />
@@ -553,14 +575,22 @@ export default function HomePage() {
             <SwiperSlide>
               <div className="course-card">
                 <img
-                  src="https://monzcreativeschool.com/assets/images/banner/popular-courses/graphic-design.png"
+                     src="/images/homepage/course-card-image/arch.webp"
                   alt="Multimedia & Motion Graphics"
                   className="course-img"
                 />
                 <h3>Master in Architectural Design</h3>
                 <div className="tools">
                   {[
-          
+                         "/tools/blender.png",
+                         "/tools/u.png",
+                         "/tools/marmost.png",
+                         "/tools/s.png",
+                         "/tools/ac++.png",
+                         "/tools/python.png",
+                         "/tools/pr.png",
+                         "/tools/au.png",
+                        
                   ].map((src, i) => (
                     <img key={i} src={src} alt={`Tool ${i + 1}`} />
                   ))}
@@ -570,33 +600,6 @@ export default function HomePage() {
               </div>
             </SwiperSlide>
 
-            <SwiperSlide>
-              <div className="course-card">
-                <img
-                  src="https://monzcreativeschool.com/assets/images/banner/popular-courses/graphic-design.png"
-                  alt="Multimedia & Motion Graphics"
-                  className="course-img"
-                />
-                <h3>Master in AR/VR</h3>
-                <div className="tools">
-                  {[
-                      "/tools/blender.png",
-                      "/tools/u.png",
-                      "/tools/s.png",
-                      "/tools/c++.png",
-                      "/tools/python.png",
-                      "/tools/pr.png",
-                      "/tools/au.png",
-                      "/tools/m.png",
-   
-                  ].map((src, i) => (
-                    <img key={i} src={src} alt={`Tool ${i + 1}`} />
-                  ))}
-                </div>
-                <p>Duration: 9 Months</p>
-                <Button variant="warning">Enquire Now</Button>
-              </div>
-            </SwiperSlide>
           </Swiper>
         </Container>
       </section>

@@ -148,7 +148,7 @@
       /* still transparent */ rgba(0, 0, 0, 0) 90%,
       /* fade back to white */ rgba(0, 0, 0, 0) 100% 
     ),
-    url(" https://files.123freevectors.com/wp-content/original/157378-abstract-red-background-vector-illustration.jpg ")
+    url("../public/images/homepage/footerbg.webp")
       center/cover no-repeat;
   background-blend-mode: normal;
   color: #000000;
