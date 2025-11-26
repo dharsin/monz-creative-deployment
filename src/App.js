@@ -7,7 +7,10 @@ import VfxCourse from "./pages/VfxCourse";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import AnimationCourseCoimbatore from "./pages/AnimationCourseCoimbatore";
-import UiUxCourseCoimbatore from "./pages/UiUxCourseCoimbatore";
+import UiUxCourseSaravanampatti from "./pages/UiUxCourseSaravanampatti";
+import VfxCourseCoimbatore from "./pages/VfxCourseCoimbatore";
+import VideoEditingCourseCoimbatore from "./pages/VideoEditingCourse";
+import SapCourseCoimbatore from "./pages/SapCourseCoimbatore";
 
 import PlacementPage from "./pages/PlacementPage";
 
@@ -26,10 +29,23 @@ function App() {
           element={<AnimationCourseCoimbatore />}
         />
         <Route
-          path="/ui-ux-course-in-coimbatore"
-          element={<UiUxCourseCoimbatore />}
+          path="/ui-ux-design-course-in-saravanampatti"
+          element={<UiUxCourseSaravanampatti />}
+        />
+          <Route
+          path="/vfx-course-in-coimbatore"
+          element={<VfxCourseCoimbatore />}
+         />
+          <Route
+          path="/video-editing-course-in-coimbatore"
+          element={<VideoEditingCourseCoimbatore />}
+        />
+            <Route
+          path="/sap-course-in-coimbatore"
+          element={<SapCourseCoimbatore />}
         />
       </Routes>
+      
     </Router>
   );
 }

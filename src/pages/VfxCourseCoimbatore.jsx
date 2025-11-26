@@ -13,35 +13,38 @@ import Accordion from "react-bootstrap/Accordion";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 
-
-const AnimationCourseCoimbatore = () => {
+const VfxCourseCoimbatore = () => {
   const topRowStudents = [
     {
       name: "Aarav Sharma",
       package: "8.2 LPA",
       company: "Amazon",
-      companyLogo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+      companyLogo:
+        "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
       photo: "https://randomuser.me/api/portraits/men/45.jpg",
     },
     {
       name: "Diya Patel",
       package: "7.5 LPA",
       company: "Netflix",
-      companyLogo: "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg",
+      companyLogo:
+        "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg",
       photo: "https://randomuser.me/api/portraits/women/32.jpg",
     },
     {
       name: "Rahul Mehta",
       package: "9 LPA",
       company: "Google",
-      companyLogo: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
+      companyLogo:
+        "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
       photo: "https://randomuser.me/api/portraits/men/50.jpg",
     },
     {
       name: "Sneha Iyer",
       package: "6.8 LPA",
       company: "Adobe",
-      companyLogo: "https://upload.wikimedia.org/wikipedia/commons/5/51/Adobe_Systems_logo_and_wordmark.svg",
+      companyLogo:
+        "https://upload.wikimedia.org/wikipedia/commons/5/51/Adobe_Systems_logo_and_wordmark.svg",
       photo: "https://randomuser.me/api/portraits/women/41.jpg",
     },
   ];
@@ -51,33 +54,37 @@ const AnimationCourseCoimbatore = () => {
       name: "Vikram Nair",
       package: "10.5 LPA",
       company: "Microsoft",
-      companyLogo: "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
+      companyLogo:
+        "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
       photo: "https://randomuser.me/api/portraits/men/12.jpg",
     },
     {
       name: "Ishita Das",
       package: "7.9 LPA",
       company: "Apple",
-      companyLogo: "https://upload.wikimedia.org/wikipedia/commons/0/02/Apple_logo_black.svg",
+      companyLogo:
+        "https://upload.wikimedia.org/wikipedia/commons/0/02/Apple_logo_black.svg",
       photo: "https://randomuser.me/api/portraits/women/33.jpg",
     },
     {
       name: "Arjun Rao",
       package: "8.4 LPA",
       company: "Infosys",
-      companyLogo: "https://upload.wikimedia.org/wikipedia/commons/4/45/Infosys_logo.svg",
+      companyLogo:
+        "https://upload.wikimedia.org/wikipedia/commons/4/45/Infosys_logo.svg",
       photo: "https://randomuser.me/api/portraits/men/27.jpg",
     },
     {
       name: "Priya Sen",
       package: "6.5 LPA",
       company: "Wipro",
-      companyLogo: "https://upload.wikimedia.org/wikipedia/commons/f/f5/Wipro_Primary_Logo_Color_RGB.svg",
+      companyLogo:
+        "https://upload.wikimedia.org/wikipedia/commons/f/f5/Wipro_Primary_Logo_Color_RGB.svg",
       photo: "https://randomuser.me/api/portraits/women/26.jpg",
     },
   ];
   return (
-      <>  
+    <>
       <section className="navbar-section shadow-sm py-3">
         <Container>
           <Row className="align-items-center">
@@ -178,20 +185,17 @@ const AnimationCourseCoimbatore = () => {
       <section className="vfx-hero">
         <Container>
           <Row>
-            <p className="vfx-tagline">— 2D Animation + 3D Animation + Motion Design</p>
+            <p className="vfx-tagline">— Film + 3D + Visual Effects (VFX)</p>
             <h1>
-              <span className="highlight">Animation Course  </span> in Coimbatore
+              <span className="highlight">VFX course </span>in saravanampatti
             </h1>
             <p className="vfx-subtitle">
-             
-No.1 animation training institute in coimbatore with 100% placement
+              No.1 VFX training institute in saravanampatti with 100% placement
             </p>
 
             <div className="vfx-buttons">
               <button className="btn enroll-btn">Enroll Now</button>
             </div>
-
-         
           </Row>
         </Container>
       </section>
@@ -200,20 +204,118 @@ No.1 animation training institute in coimbatore with 100% placement
         <div className="container">
           <div className="row align-items-start">
             <div className="col-lg-6 mb-4">
-              <h2 className="why-heading">
-              Animation and Multimedia Course in Coimbatore
-              </h2>
+              <h2 className="why-heading">VFX Course in Saravanampatti</h2>
               <p className="why-text">
-              Are you looking for animation Courses? Monz's Creative Schools 3D animation courses are the best choice if you are willing to make a career in Animation and Multimedia. Our 3D animation classes are not just based on theory we provide students with 100% practical Knowledge.If You are searching for animation courses near you then Monz creative school is your best choice.
+                Embrace foster career development with the VFX Course in
+                Saravanampatti leads to extensive earning opportunities across
+                several sectors. Industry-best instructors will educate
+                students, graduates, and working professionals with a holistic
+                VFX training approach. Unwavering placement preparation equips
+                learners with skills and knowledge which are required for
+                industry-ready professionals. It helps you develop proficiency
+                in various specialized areas, like techniques, storytelling
+                principles, and industry-standard digital applications. On top
+                of everything, limitless provisions will be accessible at the
+                leading VFX training in Coimbatore - Monz Creative School. For
+                unlocking essential information, such as available job
+                prospects, competitive salaries, and many other details, explore
+                the following sections consistently.
               </p>
 
-              <p>Our animation course teaches students the step-by-step process of giving life to their 3d characters. We also provide a visual effects course which will help you to Give stunning VFX to your creation.Learn vfx and animation course combined mastery which will help to make your animation work combined with vfx gives a stunning visual treat to the audience and impressive profile to HR.</p>
+              <h2 className="why-heading">
+                About the VFX Course in Saravanampatti
+              </h2>
+              <p>
+                Learners who are pursuing the VFX and animation course will
+                understand techniques and technologies exploited in television,
+                games, film, and other media platforms. Develops practical
+                skills with composting, special effects, motion graphics, 2D and
+                3D animations. Grow under highly experienced trainers who hold
+                years of excellent teaching experience in the field. Eventually,
+                you will be eligible for designations like animator, character
+                designer, storyboard artist, game designer, visual effects
+                artist, etc.
+              </p>
 
-                <p>Our visual effects classes are designed to give you a comprehensive understanding of the tools and techniques used to create stunning visual effects. With our courses, you can learn to create realistic CGI, add 3D effects, and animate characters. Our courses also include training on how to create virtual environments, manipulate lighting, and render realistic graphics. You can also learn how to create 3D animations and visual effects.</p>
-            
-              <div className="row g-3 mt-4">
-             
-              </div>
+              <h2 className="why-heading">Monz Creative School Highlights:</h2>
+              <p>• Dedicated placement preparation </p>
+              <p>• Online/Offline training</p>
+              <p>• Career-focused approach</p>
+              <p>• Industry-best mentors</p>
+              <p>• Broaden job opportunities</p>
+              <p>• Accessible multiple provisions</p>
+              <p>• Numerous adaptable schedules</p>
+              <p>• Certification with industry-recognition</p>
+              <p>• Stimulates credibility and job prospects</p>
+
+              <h2 className="why-heading">
+                Benefits of a VFX Course in Saravanampatti:
+              </h2>
+              <p>
+                • Those who take the Blender VFX course will master t echnical
+                skills from scratch by developing proficiency in every standard
+                tool and software.{" "}
+              </p>
+              <p>
+                • Along with all potential perks, the VFX course fees in
+                Coimbatore are designed to fit an affordable budget to make
+                everything accessible for everyone.
+              </p>
+              <p>
+                • Having proof of completed VFX certificate courses at famous
+                institutions makes it simple to attract competitive-earning work
+                from diverse sectors.
+              </p>
+              <p>
+                • Investing in the practical VFX training in Coimbatore will
+                deliver comprehensive, industry-specific knowledge.
+              </p>
+              <p>
+                • Learners are getting the chance in visual effects classes to
+                work on advanced tools and technologies lively.
+              </p>
+              <p>
+                • You can get all other branch locations by the VFX course near
+                me and start chasing your passion with the real experts’
+                guidance.
+              </p>
+              <p>
+                • Outcomes of the guaranteed placement prep on the VFX animation
+                course in Coimbatore make you potential enough to get a job at
+                top enterprises easily.
+              </p>
+
+              <h2 className="why-heading">Career Paths:</h2>
+              <p>
+                By completing the VFX Course in Saravanampatti, you will become
+                an eligible candidate for the following job roles.
+              </p>
+              <p>• VFX Artist </p>
+              <p>• Lighting Artist</p>
+              <p>• Compositor</p>
+              <p>• 3D Modeler</p>
+              <p>• Technical Director</p>
+              <p>• Game Designer</p>
+              <p>• Roto Artist</p>
+              <p>• Storyboard Artist</p>
+              <p>• Motion Graphics Designer</p>
+              <p>• Animator</p>
+
+              <h2 className="why-heading">Takeaway</h2>
+              <p>
+                Overall glance suggests that the VFX Course in Saravanampatti
+                leads to overwhelming potential job offers with rewarding
+                remunerative. At the stage of training completion, you will get
+                excellent placement prep service, authorized certification,
+                customized learning options, and many other facilities. Learners
+                utilizing the VFX institute near me can help them find these
+                services within the shortest distance from their locations. With
+                mere registration in the best VFX training in Coimbatore - Monz
+                Creative School, grow under industrial experts, regardless of
+                any restrictions.
+              </p>
+
+              <div className="row g-3 mt-4"></div>
             </div>
 
             <div className="col-lg-6">
@@ -250,65 +352,72 @@ No.1 animation training institute in coimbatore with 100% placement
         </div>
       </section>
 
-       <section className="plecement-marquee-section">
-       <h2 className="students-heading">
-       Animation Course in Coimbatore with Placement     
-       </h2>
-  
+      <section className="plecement-marquee-section">
+        <h2 className="students-heading">
+          UI/UX Design Course in Saravanampatti with Placement
+        </h2>
 
-      <div className="students-marquee">
-        <div className="marquee-group">
-          {[...topRowStudents, ...topRowStudents].map((student, i) => (
-            <div className="student-card" key={i}>
-              <img src={student.photo} alt={student.name} className="student-photo" />
-              <div className="student-info">
-                <h4>{student.name}</h4>
-                <p className="package">{student.package}</p>
-                <div className="company">
-                  <img src={student.companyLogo} alt={student.company} />
-                  <span>{student.company}</span>
+        <div className="students-marquee">
+          <div className="marquee-group">
+            {[...topRowStudents, ...topRowStudents].map((student, i) => (
+              <div className="student-card" key={i}>
+                <img
+                  src={student.photo}
+                  alt={student.name}
+                  className="student-photo"
+                />
+                <div className="student-info">
+                  <h4>{student.name}</h4>
+                  <p className="package">{student.package}</p>
+                  <div className="company">
+                    <img src={student.companyLogo} alt={student.company} />
+                    <span>{student.company}</span>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
 
-      <div className="students-marquee reverse">
-        <div className="marquee-group reverse">
-          {[...bottomRowStudents, ...bottomRowStudents].map((student, i) => (
-            <div className="student-card" key={i}>
-              <img src={student.photo} alt={student.name} className="student-photo" />
-              <div className="student-info">
-                <h4>{student.name}</h4>
-                <p className="package">{student.package}</p>
-                <div className="company">
-                  <img src={student.companyLogo} alt={student.company} />
-                  <span>{student.company}</span>
+        <div className="students-marquee reverse">
+          <div className="marquee-group reverse">
+            {[...bottomRowStudents, ...bottomRowStudents].map((student, i) => (
+              <div className="student-card" key={i}>
+                <img
+                  src={student.photo}
+                  alt={student.name}
+                  className="student-photo"
+                />
+                <div className="student-info">
+                  <h4>{student.name}</h4>
+                  <p className="package">{student.package}</p>
+                  <div className="company">
+                    <img src={student.companyLogo} alt={student.company} />
+                    <span>{student.company}</span>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <StudentsWork />
+      <StudentsWork />
 
-      <section className="job-ready-section container my-5 py-5">
+      <section className="container my-5 py-5">
         <div className="row align-items-center">
           <div className="col-md-6">
             <div className="row g-3">
               <div className="col-6">
                 <img
-                  src="/images/animation/animation-1.jpg"
+                  src="https://www.animationcoursesahmedabad.com/images/course/image/1666244567.jpg"
                   alt="Studio Training"
                   className="img-fluid rounded-4 shadow-sm"
                 />
               </div>
               <div className="col-6">
                 <img
-                  src="/images/animation/animation-2.jpeg"
+                  src="https://www.arena-multimedia.com/assets/c1-Buw03uS4.jpeg"
                   alt="Online Class"
                   className="img-fluid rounded-4 shadow-sm"
                 />
@@ -320,12 +429,12 @@ No.1 animation training institute in coimbatore with 100% placement
           <div className="col-md-6 ps-md-5 mt-4 mt-md-0">
             <h2 className="fw-bold mb-3">
               Become a{" "}
-              <span className="head-highlight">
-               Job-Ready Animator.
-              </span>
+              <span className="head-highlight">Job-Ready VFX Artist.</span>
             </h2>
             <p className="text-muted mb-4">
-            Master industry-leading animation tools, create impressive character & motion projects, and launch your creative career from anywhere. Learn animation online with hands-on practice and real studio insights.
+              Master industry-standard VFX tools, build a powerful showreel &
+              kick-start your creative career from anywhere. Learn VFX online
+              with shot-based projects and real studio production insights.
             </p>
 
             <ul className="list-unstyled fs-5">
@@ -334,7 +443,7 @@ No.1 animation training institute in coimbatore with 100% placement
                   className="bi bi-check-circle-fill me-2"
                   style={{ color: "#f7941d" }}
                 ></i>
-                AI-Integrated Curriculum
+                AI-Assisted VFX Workflow Integration
               </li>
               <li className="mb-2">
                 <i
@@ -348,21 +457,19 @@ No.1 animation training institute in coimbatore with 100% placement
                   className="bi bi-check-circle-fill me-2"
                   style={{ color: "#f7941d" }}
                 ></i>
-                Live Classes with Mentorship
+                Live Classes with Expert Mentorship
               </li>
               <li>
                 <i
                   className="bi bi-check-circle-fill me-2"
                   style={{ color: "#f7941d" }}
                 ></i>
-                Build 20+ Real Projects
+                Create 20+ Production-Ready VFX Shots for Your Showreel
               </li>
             </ul>
           </div>
         </div>
       </section>
-
-  
 
       <section className="course-coverage-section container my-5">
         <div className="text-center mb-4">
@@ -371,7 +478,9 @@ No.1 animation training institute in coimbatore with 100% placement
             Skills You'll Master.
           </h2>
           <p className="text-muted">
-          Master industry-standard 2D & 3D animation tools such as After Effects, Blender, Maya, and AI-assisted workflows to build strong animation skills and a studio-ready showre
+            Master industry-standard VFX tools such as Nuke, After Effects,
+            Blender, Mocha & AI-powered workflows to build a strong skillset and
+            a job-ready VFX showreel.
           </p>
         </div>
 
@@ -379,16 +488,18 @@ No.1 animation training institute in coimbatore with 100% placement
           <div className="row align-items-center">
             <div className="col-md-6 text-center mb-4 mb-md-0">
               <img
-                   src="/images/animation/certified-animation.webp"
-               alt="Graphic Design Course"
+                src="https://assets.seamedu.com/uploads/posts/feature_The-Verdict-Game-Design_-Animation-_-VFX-Careers-in-India--375-by1801678865040.jpg"
+                alt="Graphic Design Course"
                 className="img-fluid rounded-4 course-image"
               />
             </div>
 
             <div className="col-md-6">
-              <h4 className="fw-bold mb-2">CERTIFIED IN 3D ANIMATION (3 Months)</h4>
+              <h4 className="fw-bold mb-2">
+                CERTIFIED IN VFX COMPOSITING (3 Months)
+              </h4>
               <p className="fw-semibold text-secondary mb-3">
-              Learn the core tools used by every professional 3D animator:
+                Learn the core tools used by every professional compositor:
               </p>
 
               <div className="d-flex flex-wrap gap-3 mb-4">
@@ -404,7 +515,7 @@ No.1 animation training institute in coimbatore with 100% placement
 
                 <div className="tool-box text-center">
                   <img
-                        src="/tools/ae.png"
+                    src="/tools/ae.png"
                     alt="Illustrator"
                     width="40"
                     height="40"
@@ -414,7 +525,7 @@ No.1 animation training institute in coimbatore with 100% placement
 
                 <div className="tool-box text-center">
                   <img
-                      src="/tools/pr.png"
+                    src="/tools/pr.png"
                     alt="InDesign"
                     width="40"
                     height="40"
@@ -423,18 +534,13 @@ No.1 animation training institute in coimbatore with 100% placement
                 </div>
 
                 <div className="tool-box text-center">
-                  <img
-                   src="/tools/s.png"
-                    alt="Canva"
-                    width="40"
-                    height="40"
-                  />
+                  <img src="/tools/s.png" alt="Canva" width="40" height="40" />
                   <p className="fw-semibold mt-2 mb-0">Seal</p>
                 </div>
 
                 <div className="tool-box text-center">
                   <img
-                   src="/tools/au.png"
+                    src="/tools/au.png"
                     alt="Firefly"
                     width="40"
                     height="40"
@@ -444,17 +550,18 @@ No.1 animation training institute in coimbatore with 100% placement
 
                 <div className="tool-box text-center">
                   <img
-                   src="/tools/blender.png"
+                    src="/tools/blender.png"
                     alt="Midjourney"
                     width="40"
                     height="40"
                   />
-                  <p className="fw-semibold mt-2 mb-0">Blender  </p>
+                  <p className="fw-semibold mt-2 mb-0">Blender </p>
                 </div>
               </div>
 
               <p className="text-secondary">
-              Perfect for beginners who want to build strong 3D foundations, learn to animate characters, and create a job-ready mini showreel.
+                Perfect for beginners who want to build strong design skills and
+                a job-ready portfolio.
               </p>
             </div>
           </div>
@@ -468,7 +575,7 @@ No.1 animation training institute in coimbatore with 100% placement
           <div className="row align-items-center">
             <div className="col-md-6 text-center mb-4 mb-md-0">
               <img
-              src="/images/animation/masters-animation.jpg"
+                src="https://p.productioncrate.com/stock-hd/archives/categories/GROUND_EXPLOSIONS_NO_TEXT.jpg"
                 alt="Graphic Design Course"
                 className="img-fluid rounded-4 course-image"
               />
@@ -476,10 +583,11 @@ No.1 animation training institute in coimbatore with 100% placement
 
             <div className="col-md-6">
               <h4 className="fw-bold mb-2">
-              MASTER IN ANIMATION (6 Months)
+                MASTER IN VFX & ANIMATION (6 Months)
               </h4>
               <p className="fw-semibold text-secondary mb-3">
-                Learn the core tools used by every professional designer:
+                Learn the complete set of tools used by professional VFX and CGI
+                artists:
               </p>
 
               <div className="d-flex flex-wrap gap-3 mb-4">
@@ -495,7 +603,7 @@ No.1 animation training institute in coimbatore with 100% placement
 
                 <div className="tool-box text-center">
                   <img
-                        src="/tools/ae.png"
+                    src="/tools/ae.png"
                     alt="Illustrator"
                     width="40"
                     height="40"
@@ -505,7 +613,7 @@ No.1 animation training institute in coimbatore with 100% placement
 
                 <div className="tool-box text-center">
                   <img
-                      src="/tools/pr.png"
+                    src="/tools/pr.png"
                     alt="InDesign"
                     width="40"
                     height="40"
@@ -514,18 +622,13 @@ No.1 animation training institute in coimbatore with 100% placement
                 </div>
 
                 <div className="tool-box text-center">
-                  <img
-                   src="/tools/s.png"
-                    alt="Canva"
-                    width="40"
-                    height="40"
-                  />
+                  <img src="/tools/s.png" alt="Canva" width="40" height="40" />
                   <p className="fw-semibold mt-2 mb-0">Seal</p>
                 </div>
 
                 <div className="tool-box text-center">
                   <img
-                   src="/tools/au.png"
+                    src="/tools/au.png"
                     alt="Firefly"
                     width="40"
                     height="40"
@@ -535,89 +638,78 @@ No.1 animation training institute in coimbatore with 100% placement
 
                 <div className="tool-box text-center">
                   <img
-                   src="/tools/blender.png"
+                    src="/tools/blender.png"
                     alt="Midjourney"
                     width="40"
                     height="40"
                   />
-                  <p className="fw-semibold mt-2 mb-0">Blender  </p>
+                  <p className="fw-semibold mt-2 mb-0">Blender </p>
                 </div>
               </div>
 
               <p className="text-secondary">
-              Perfect for learners who want to master 2D + 3D animation, character acting, motion graphics, and build a professional studio-ready animation showreel with real projects.
+                Perfect for beginners who want to build strong design skills and
+                a job-ready portfolio.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="tools-section py-5">  <video
-    className="tools-bg-video"
-    autoPlay
-    muted
-    loop
-    playsInline
-  >
-    <source src="/videos/tools-bg.mp4" type="video/mp4" />
-  </video>
+      <section className="tools-section py-5">
+        <div className="container text-center">
+          <h2 className="tools-heading mb-3">Tools Covered</h2>
+          <p className="tools-description mb-4">
+            Master industry-standard tools used by professional VFX artists to
+            create cinematic effects, realistic composites, and high-quality
+            visual sequences.
+          </p>
 
-  <div className="tools-gradient"></div>
+          <div className="row justify-content-center">
+            <div className="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+              <div className="tool-card">
+                <img src="/tools/ps.png" alt="Photoshop" />
+                <p>Photoshop</p>
+              </div>
+            </div>
 
-  <div className="container text-center content">
-    <h2 className="tools-heading mb-3">Tools Covered</h2>
-    <p className="tools-description mb-4">
-    Master industry-standard tools used by professional animators to create stunning character animations, motion graphics, and high-quality visual sequences.
-    </p>
+            <div className="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+              <div className="tool-card">
+                <img src="/tools/ae.png" alt="Illustrator" />
+                <p>Adobe After Effects</p>
+              </div>
+            </div>
 
-    <div className="row justify-content-center">
-      
-      <div className="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
-        <div className="tool-card">
-          <img src="/tools/ps.png" alt="Photoshop" />
-          <p>Photoshop</p>
+            <div className="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+              <div className="tool-card">
+                <img src="/tools/pr.png" alt="Illustrator" />
+                <p>Adobe Premiere pro</p>
+              </div>
+            </div>
+
+            <div className="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+              <div className="tool-card">
+                <img src="/tools/s.png" alt="Illustrator" />
+                <p>Seal</p>
+              </div>
+            </div>
+
+            <div className="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+              <div className="tool-card">
+                <img src="/tools/au.png" alt="InDesign" />
+                <p>Adobe Audition</p>
+              </div>
+            </div>
+
+            <div className="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+              <div className="tool-card">
+                <img src="/tools/blender.png" alt="InDesign" />
+                <p>Blender</p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div className="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
-        <div className="tool-card">
-          <img src="/tools/ae.png" alt="After Effects" />
-          <p>Adobe After Effects</p>
-        </div>
-      </div>
-
-      <div className="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
-        <div className="tool-card">
-          <img src="/tools/pr.png" alt="Premiere Pro" />
-          <p>Adobe Premiere Pro</p>
-        </div>
-      </div>
-
-      <div className="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
-        <div className="tool-card">
-          <img src="/tools/s.png" alt="Seal" />
-          <p>Seal</p>
-        </div>
-      </div>
-
-      <div className="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
-        <div className="tool-card">
-          <img src="/tools/au.png" alt="Adobe Audition" />
-          <p>Adobe Audition</p>
-        </div>
-      </div>
-
-      <div className="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
-        <div className="tool-card">
-          <img src="/tools/blender.png" alt="Blender" />
-          <p>Blender</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
+      </section>
 
       <section className="testimonials-section py-5">
         <Container>
@@ -679,45 +771,71 @@ No.1 animation training institute in coimbatore with 100% placement
         <h2 className="faq-headding"> Frequently Asked Questions</h2>
         <Accordion defaultActiveKey="0">
           <Accordion.Item eventKey="0">
-            <Accordion.Header>1. What is the duration of the animation course in Coimbatore?
+            <Accordion.Header>
+              1. What is the duration of the animation course in Coimbatore?
             </Accordion.Header>
             <Accordion.Body>
-            Our animation course at Monz Creative School in Coimbatore typically lasts between 3 months to 6 year, depending on the program level (basic to advanced). It includes practical training on 2D/3D animation, motion graphics, and visual storytelling.
+              Our animation course at Monz Creative School in Coimbatore
+              typically lasts between 3 months to 6 year, depending on the
+              program level (basic to advanced). It includes practical training
+              on 2D/3D animation, motion graphics, and visual storytelling.
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="1">
-            <Accordion.Header>2. Do I need any prior skills to join the animation course?
+            <Accordion.Header>
+              2. Do I need any prior skills to join the animation course?
             </Accordion.Header>
             <Accordion.Body>
-            No prior skills are required! Our course is beginner-friendly and designed for students from any background. We teach you from the basics of sketching and storyboarding to advanced software like Adobe Animate, Maya, and Blender.
+              No prior skills are required! Our course is beginner-friendly and
+              designed for students from any background. We teach you from the
+              basics of sketching and storyboarding to advanced software like
+              Adobe Animate, Maya, and Blender.
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="3">
-            <Accordion.Header>3. What job roles can I get after completing the animation course?
+            <Accordion.Header>
+              3. What job roles can I get after completing the animation course?
             </Accordion.Header>
             <Accordion.Body>
-            After completing the animation course, you can work as a 2D/3D Animator, Motion Graphics Artist, Character Designer, Storyboard Artist, or VFX Artist. Our placement support team also helps connect you with studios, production houses, and freelance opportunities.
+              After completing the animation course, you can work as a 2D/3D
+              Animator, Motion Graphics Artist, Character Designer, Storyboard
+              Artist, or VFX Artist. Our placement support team also helps
+              connect you with studios, production houses, and freelance
+              opportunities.
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="4">
-            <Accordion.Header>4. Is this animation course available online?
+            <Accordion.Header>
+              4. Is this animation course available online?
             </Accordion.Header>
             <Accordion.Body>
-            Yes! We offer both offline classes at our Coimbatore center and live instructor-led online sessions. You can choose the learning mode that fits your schedule while still receiving the same expert guidance and project-based learning.
+              Yes! We offer both offline classes at our Coimbatore center and
+              live instructor-led online sessions. You can choose the learning
+              mode that fits your schedule while still receiving the same expert
+              guidance and project-based learning.
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="5">
-            <Accordion.Header>5. What software will I learn during the animation training?
+            <Accordion.Header>
+              5. What software will I learn during the animation training?
             </Accordion.Header>
             <Accordion.Body>
-            You’ll be trained in industry-standard software like Adobe Animate, After Effects, Maya, Blender, and Toon Boom. These tools are essential for 2D/3D animation, visual effects, and character rigging used in film, TV, and gaming industries.
+              You’ll be trained in industry-standard software like Adobe
+              Animate, After Effects, Maya, Blender, and Toon Boom. These tools
+              are essential for 2D/3D animation, visual effects, and character
+              rigging used in film, TV, and gaming industries.
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="6">
-            <Accordion.Header>6. Does the animation course offer placement support?
+            <Accordion.Header>
+              6. Does the animation course offer placement support?
             </Accordion.Header>
             <Accordion.Body>
-            Absolutely! At Monz Creative School, we offer dedicated placement assistance including resume building, interview prep, and internship opportunities. Many of our students have been successfully placed in animation studios, advertising agencies, and production companies.
+              Absolutely! At Monz Creative School, we offer dedicated placement
+              assistance including resume building, interview prep, and
+              internship opportunities. Many of our students have been
+              successfully placed in animation studios, advertising agencies,
+              and production companies.
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>
@@ -726,4 +844,4 @@ No.1 animation training institute in coimbatore with 100% placement
     </>
   );
 };
-export default AnimationCourseCoimbatore;
+export default VfxCourseCoimbatore;
