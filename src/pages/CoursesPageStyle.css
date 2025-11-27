@@ -301,28 +301,20 @@ background-blend-mode: normal;
   }
 }
 
-
-section.container {
-  max-width: 1200px;
-}
-
 .head-highlight{
   color: red;
 }
 
-img {
+/* img {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 img:hover {
   transform: scale(1.03);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-}
-
+} */
 
 /* course overview section*? */
-
-
 .course-coverage-section {
   background-color: #fff;
 }
@@ -377,13 +369,9 @@ img:hover {
   }
 }
 
-
-
 .vfx-course-section {
   background-color: #fff;
 }
-
-
 
 .vfx-image {
   border-radius: 20px;

@@ -1,7 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
 import HomePage from "./pages/HomePage";
 import VfxCourse from "./pages/VfxCourse";
 import AboutPage from "./pages/AboutPage";

@@ -50,7 +50,7 @@
 
 .stat-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 0 20px rgba(255, 183, 0, 0.3);
+  box-shadow: 0 0 15px rgb(255 0 0 / 47%);
 }
 
 .stat-card h3 {
@@ -396,10 +396,6 @@
     min-width: 120px;
     height: 60px;
     margin: 0 15px;
-  }
-
-  .students-work-logo-card img {
-    height: 25px;
   }
 }
 

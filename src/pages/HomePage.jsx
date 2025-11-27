@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Container, Row, Col, Button, Form, Card, Nav } from "react-bootstrap";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -10,13 +10,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-
 import "../homepage.css";
-
 import BranchAccordion from "../components/BranchAccordion";
 import Footer from "../components/Footer";
+import Menu from "../components/Menu";
+import PopUpForm from "../components/PopForm.jsx";
 
 export default function HomePage() {
+  const [modalShow, setModalShow] = useState(false);
   const { scrollY } = useScroll();
   const formRef = useRef(null);
   const isInView = useInView(formRef, { once: false, amount: 0.3 });
@@ -38,7 +39,7 @@ export default function HomePage() {
     "/companies-logo/9.svg",
     "/companies-logo/10.svg"
   ];
- 
+
   const bottomLogos = [
     "/companies-logo/21.svg",
     "/companies-logo/22.svg",
@@ -54,101 +55,8 @@ export default function HomePage() {
 
   return (
     <>
-      <section className="navbar-section shadow-sm py-3">
-        <Container>
-          <Row className="align-items-center">
-            <Col xs={6} md={3}>
-              <Link
-                to="/"
-                className="navbar-logo d-flex align-items-center text-decoration-none"
-              >  
-                <img
-                  src="https://monzcreativeschool.com/assets/images/logo/monz-creative-school.png"
-                  alt="Logo"
-                  className="logo img-fluid"
-                  style={{ maxHeight: "60px" }}
-                />
-              </Link>
-            </Col>
-            <Col xs={6} md={9}>
-              <ul className="nav justify-content-end align-items-center">
-                <li>
-                  <Link className="dropdown-item" to="/">
-                    Home
-                  </Link>
-                </li>
-                <li className="nav-item dropdown">
-                  <a
-                    className="nav-link dropdown-toggle fw-semibold"
-                    href="#courses"
-                    id="coursesDropdown"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Courses
-                  </a>
-                  <ul
-                    className="dropdown-menu"
-                    aria-labelledby="coursesDropdown"
-                  >
-                    <li>
-                      <Link className="dropdown-item" to="/vfx-course">
-                        VFX
-                      </Link>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#graphic-design">
-                        Graphic Design
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#game-design">
-                        Game Design
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#digital-marketing">
-                        Digital Marketing
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#sap">
-                        SAP
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#arvr">
-                        AR / VR
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link fw-semibold" to="/placement">
-                    Placement
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link fw-semibold" href="#work">
-                    Work
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link fw-semibold" to="/about">
-                    About
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link fw-semibold" to="/contact">
-                    Contact
-                  </Link>
-                </li>
-              </ul>
-            </Col>
-          </Row>
-        </Container>
-      </section>
+      <Menu />
+
       {/* ======= Banner Section ======= */}
       <section className="banner-section">
         <motion.div
@@ -218,7 +126,7 @@ export default function HomePage() {
         <div className="parallax-bg"></div>
         <Container>
           <Row className="align-items-center">
-            <Col md={6}>
+            <Col lg={6}>
               <div className="video-wrapper">
                 <video
                   className="enquiry-video"
@@ -232,7 +140,7 @@ export default function HomePage() {
             </Col>
 
             {/* Right Side - Animated Form */}
-            <Col md={6}>
+            <Col className="animatedform" lg={5} >
               <motion.div
                 ref={formRef}
                 initial={{ opacity: 0, x: 100, y: 50 }}
@@ -271,11 +179,21 @@ export default function HomePage() {
                   </Form.Group>
                   <Form.Group className="mb-3">
                     <Form.Select>
-                      <option>Select Your Branch</option>
-                      <option>Coimbatore</option>
-                      <option>Chennai</option>
-                      <option>Bangalore</option>
-                      <option>Hyderabad</option>
+                      <option value="" disabled selected>Preferred Branch</option>
+                      <option value="Coimbatore - Gandhipuram">Coimbatore - Gandhipuram</option>
+                      <option value="Coimbatore - Malumichampatti">Coimbatore - Malumichampatti</option>
+                      <option value="Coimbatore - Saravanampatti">Coimbatore - Saravanampatti</option>
+                      <option value="Tiruppur">Tiruppur</option>
+                      <option value="Chennai - Vadapalani">Chennai - Vadapalani</option>
+                      <option value="Chennai - Velachery">Chennai - Velachery</option>
+                      <option value="Chennai - Tambaram">Chennai - Tambaram</option>
+                      <option value="Chennai - Poonamallee">Chennai - Poonamallee</option>
+                      <option value="Chennai - Ambattur">Chennai - Ambattur</option>
+                      <option value="Chennai - Guduvancheri">Chennai - Guduvancheri</option>
+                      <option value="Kanchipuram">Kanchipuram</option>
+                      <option value="Bangalore - Marathahalli">Bangalore - Marathahalli</option>
+                      <option value="Bangalore - Bommasandra">Bangalore - Bommasandra</option>
+                      <option value="Hosur">Hosur</option>
                     </Form.Select>
                   </Form.Group>
                   <Button className="submit-btn w-100" type="submit">
@@ -373,28 +291,35 @@ export default function HomePage() {
                   alt="VFX & Animation"
                   className="course-img"
                 />
-                <h3>Master in VFX</h3>
-                <div className="tools">
-                  {[
-                           "/tools/ps.png",
-                           "/tools/blender.png",
-                           "/tools/m.png",
-                           "/tools/ae.png",
-                           "/tools/au.png",
-                           "/tools/s.png",
-                           "/tools/u.png",
-                           "/tools/marmost.png",
-                           "/tools/color-m.png",
-                           "/tools/houdini.png",
-                           "/tools/nuke.png",
-                           "/tools/davinci.png",   
-                           "/tools/z.png",
-                  ].map((src, i) => (
-                    <img key={i} src={src} alt={`Tool ${i + 1}`} />
-                  ))}
+                <div className="p-2">
+                  <h3>Master in VFX</h3>
+                  <div className="tools">
+                    {[
+                      "/tools/ps.png",
+                      "/tools/blender.png",
+                      "/tools/m.png",
+                      "/tools/ae.png",
+                      "/tools/au.png",
+                      "/tools/s.png",
+                      "/tools/u.png",
+                      "/tools/marmost.png",
+                      "/tools/color-m.png",
+                      "/tools/houdini.png",
+                      "/tools/nuke.png",
+                      "/tools/davinci.png",
+                      "/tools/z.png",
+                    ].map((src, i) => (
+                      <img key={i} src={src} alt={`Tool ${i + 1}`} />
+                    ))}
+                  </div>
+                  <p>Duration: 12 Months</p>
+                  {/* <Button variant="warning">Enquire Now</Button> */}
+                  <Button variant="primary" onClick={() => setModalShow(true)}>
+                    Launch Popup
+                  </Button>
+
+                  <PopUpForm show={modalShow} onHide={() => setModalShow(false)} />
                 </div>
-                <p>Duration: 12 Months</p>
-                <Button variant="warning">Enquire Now</Button>
               </div>
             </SwiperSlide>
 
@@ -406,23 +331,25 @@ export default function HomePage() {
                   alt="AR / VR Design"
                   className="course-img"
                 />
-                <h3>Master in Graphic Design</h3>
-                <div className="tools">
-                  {[
-                    
-                   "/tools/ps.png",
-                   "/tools/ai.png",
-                   "/tools/coreldraw.png",
-                   "/tools/dimension.png",
-                   "/tools/id.png",
-                   "/tools/xd.png",
-                   "/tools/pr.png",
-                   "/tools/ae.png",
-                   "/tools/au.png",
-                   "/tools/figma.png",
-                  ].map((src, i) => (
-                    <img key={i} src={src} alt={`Tool ${i + 1}`} />
-                  ))}
+                <div className="p-2">
+                  <h3>Master in Graphic Design</h3>
+                  <div className="tools">
+                    {[
+
+                      "/tools/ps.png",
+                      "/tools/ai.png",
+                      "/tools/coreldraw.png",
+                      "/tools/dimension.png",
+                      "/tools/id.png",
+                      "/tools/xd.png",
+                      "/tools/pr.png",
+                      "/tools/ae.png",
+                      "/tools/au.png",
+                      "/tools/figma.png",
+                    ].map((src, i) => (
+                      <img key={i} src={src} alt={`Tool ${i + 1}`} />
+                    ))}
+                  </div>
                 </div>
                 <p>Duration: 6 Months</p>
                 <Button variant="warning">Enquire Now</Button>
@@ -432,39 +359,42 @@ export default function HomePage() {
             <SwiperSlide>
               <div className="course-card">
                 <img
-                       src="/images/homepage/course-card-image/uiux.webp"
+                  src="/images/homepage/course-card-image/uiux.webp"
                   alt="Multimedia & Motion Graphics"
                   className="course-img"
                 />
-                <h3>Master in UI/UX Design</h3>
-                <div className="tools">
-                  {[
-                       "/tools/ps.png",
-                       "/tools/ai.png",
-                       "/tools/coreldraw.png",
-                       "/tools/dimension.png",
-                       "/tools/id.png",
-                       "/tools/xd.png",
-                       "/tools/pr.png",
-                       "/tools/ae.png",
-                       "/tools/au.png",
-                       "/tools/figma.png",
-                       "/tools/image.png",
-                       "/tools/js.png",
-                       "/tools/hmtl.png",
-                       "/tools/bootstrap.png",
-                       "/tools/css.png",
+                <div className="p-2">
+                  <h3>Master in UI/UX Design</h3>
+                  <div className="tools">
+                    {[
+                      "/tools/ps.png",
+                      "/tools/ai.png",
+                      "/tools/coreldraw.png",
+                      "/tools/dimension.png",
+                      "/tools/id.png",
+                      "/tools/xd.png",
+                      "/tools/pr.png",
+                      "/tools/ae.png",
+                      "/tools/au.png",
+                      "/tools/figma.png",
+                      "/tools/image.png",
+                      "/tools/js.png",
+                      "/tools/hmtl.png",
+                      "/tools/bootstrap.png",
+                      "/tools/css.png",
 
-                  ].map((src, i) => (
-                    <img key={i} src={src} alt={`Tool ${i + 1}`} />
-                  ))}
+                    ].map((src, i) => (
+                      <img key={i} src={src} alt={`Tool ${i + 1}`} />
+                    ))}
+
+                  </div>
+                  <p>Duration: 6 Months</p>
+                  <Button variant="warning">Enquire Now</Button>
                 </div>
-                <p>Duration: 6 Months</p>
-                <Button variant="warning">Enquire Now</Button>
               </div>
             </SwiperSlide>
 
-                  
+
 
             <SwiperSlide>
               <div className="course-card">
@@ -473,96 +403,100 @@ export default function HomePage() {
                   alt="Multimedia & Motion Graphics"
                   className="course-img"
                 />
-                <h3>Master in Game Design</h3>
-                <div className="tools">
-                  {[
-                       "/tools/ps.png",
-                       "/tools/blender.png",
-                       "/tools/pr.png",
-                       "/tools/m.png",
-                       "/tools/s.png",
-                       "/tools/u.png",
-                       "/tools/python.png",
-                       "/tools/z.png",
-                       "/tools/c++.png",
-                  ].map((src, i) => (
-                    <img key={i} src={src} alt={`Tool ${i + 1}`} />
-                  ))}
+                <div className="p-2">
+                  <h3>Master in Game Design</h3>
+                  <div className="tools">
+                    {[
+                      "/tools/ps.png",
+                      "/tools/blender.png",
+                      "/tools/pr.png",
+                      "/tools/m.png",
+                      "/tools/s.png",
+                      "/tools/u.png",
+                      "/tools/python.png",
+                      "/tools/z.png",
+                      "/tools/c++.png",
+                    ].map((src, i) => (
+                      <img key={i} src={src} alt={`Tool ${i + 1}`} />
+                    ))}
+                  </div>
+                  <p>Duration: 9 Months</p>
+                  <Button variant="warning">Enquire Now</Button>
                 </div>
-                <p>Duration: 9 Months</p>
-                <Button variant="warning">Enquire Now</Button>
               </div>
             </SwiperSlide>
 
             <SwiperSlide>
               <div className="course-card">
                 <img
-              src="/images/homepage/course-card-image/digital.webp"
+                  src="/images/homepage/course-card-image/digital.webp"
                   alt="Multimedia & Motion Graphics"
                   className="course-img"
                 />
-                <h3>Master in Digital Marketing</h3>
-                <div className="tools">
-                  {[
-                  "/tools/blender.png",
-                         "/tools/ps.png",
-                         "/tools/google-ads.png",
-                         "/tools/meta.png",
-                        
-                         "/tools/hubspot.png",
-                      
-                  ].map((src, i) => (
-                    <img key={i} src={src} alt={`Tool ${i + 1}`} />
-                  ))}
+                <div className="p-2">
+                  <h3>Master in Digital Marketing</h3>
+                  <div className="tools">
+                    {[
+                      "/tools/blender.png",
+                      "/tools/ps.png",
+                      "/tools/google-ads.png",
+                      "/tools/meta.png",
+
+                      "/tools/hubspot.png",
+
+                    ].map((src, i) => (
+                      <img key={i} src={src} alt={`Tool ${i + 1}`} />
+                    ))}
+                  </div>
+                  <p>Duration: 9 Months</p>
+                  <Button variant="warning">Enquire Now</Button>
                 </div>
-                <p>Duration: 9 Months</p>
-                <Button variant="warning">Enquire Now</Button>
               </div>
             </SwiperSlide>
-
-            
 
             <SwiperSlide>
               <div className="course-card">
                 <img
-                 src="/images/homepage/course-card-image/sap.webp"
+                  src="/images/homepage/course-card-image/sap.webp"
                   alt="Multimedia & Motion Graphics"
                   className="course-img"
                 />
-                <h3>Master in SAP</h3>
-                <div className="tools">
-                  {[
-                  "/tools/sap.png",
-                  ].map((src, i) => (
-                    <img key={i} src={src} alt={`Tool ${i + 1}`} />
-                  ))}
+                <div className="p-2">
+                  <h3>Master in SAP</h3>
+                  <div className="tools">
+                    {[
+                      "/tools/sap.png",
+                    ].map((src, i) => (
+                      <img key={i} src={src} alt={`Tool ${i + 1}`} />
+                    ))}
+                  </div>
+                  <p>Duration: 9 Months</p>
+                  <Button variant="warning">Enquire Now</Button>
                 </div>
-                <p>Duration: 9 Months</p>
-                <Button variant="warning">Enquire Now</Button>
               </div>
             </SwiperSlide>
-
 
             <SwiperSlide>
               <div className="course-card">
                 <img
-                   src="/images/homepage/course-card-image/digital.webp"
+                  src="/images/homepage/course-card-image/digital.webp"
                   alt="Multimedia & Motion Graphics"
                   className="course-img"
                 />
+
                 <h3>Master in Animation</h3>
                 <div className="tools">
                   {[
-                   "/tools/ps.png",
-                   "/tools/blender.png",
-                   "/tools/pr.png",
-                   "/tools/ae.png",
-                   "/tools/au.png",
-                   "/tools/s.png",
-                   "/tools/u.png",
-                   "/tools/m.png",
+                    "/tools/ps.png",
+                    "/tools/blender.png",
+                    "/tools/pr.png",
+                    "/tools/ae.png",
+                    "/tools/au.png",
+                    "/tools/s.png",
+                    "/tools/u.png",
+                    "/tools/m.png",
 
-                 
+
                   ].map((src, i) => (
                     <img key={i} src={src} alt={`Tool ${i + 1}`} />
                   ))}
@@ -575,22 +509,22 @@ export default function HomePage() {
             <SwiperSlide>
               <div className="course-card">
                 <img
-                     src="/images/homepage/course-card-image/arch.webp"
+                  src="/images/homepage/course-card-image/arch.webp"
                   alt="Multimedia & Motion Graphics"
                   className="course-img"
                 />
                 <h3>Master in Architectural Design</h3>
                 <div className="tools">
                   {[
-                         "/tools/blender.png",
-                         "/tools/u.png",
-                         "/tools/marmost.png",
-                         "/tools/s.png",
-                         "/tools/ac++.png",
-                         "/tools/python.png",
-                         "/tools/pr.png",
-                         "/tools/au.png",
-                        
+                    "/tools/blender.png",
+                    "/tools/u.png",
+                    "/tools/marmost.png",
+                    "/tools/s.png",
+                    "/tools/ac++.png",
+                    "/tools/python.png",
+                    "/tools/pr.png",
+                    "/tools/au.png",
+
                   ].map((src, i) => (
                     <img key={i} src={src} alt={`Tool ${i + 1}`} />
                   ))}
@@ -653,7 +587,7 @@ export default function HomePage() {
         </Row>
       </section>
 
- <section className="students-gallery-section">
+      <section className="students-gallery-section">
         <Container>
           <Row className="justify-content-center text-center">
             <Col lg={10}>
@@ -681,163 +615,163 @@ export default function HomePage() {
         </Row>
       </section>
       <section className="testimonial-section">
-  <div className="testimonial-overlay"></div>
-  <h2>What Our Students Say</h2>
+        <div className="testimonial-overlay"></div>
+        <h2>What Our Students Say</h2>
 
-  <div className="testimonial-grid">
-    
-    {/* 1 */}
-    <div className="testimonial-card">
-      <div className="image-wrapper">
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/848/848006.png"
-          alt="profile"
-        />
-        <div className="quote-icon">
-          <FaQuoteRight />
+        <div className="testimonial-grid">
+
+          {/* 1 */}
+          <div className="testimonial-card">
+            <div className="image-wrapper">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/848/848006.png"
+                alt="profile"
+              />
+              <div className="quote-icon">
+                <FaQuoteRight />
+              </div>
+            </div>
+            <p>
+              “Studying at Monz Creative School has completely transformed my
+              confidence. The trainers are supportive, and the teaching methods are
+              very practical and industry-focused.”
+            </p>
+            <div className="star-rating">
+              {[...Array(5)].map((_, i) => (
+                <AiFillStar key={i} />
+              ))}
+            </div>
+            <h3>Priya Chandran</h3>
+            <span>UI/UX Student</span>
+          </div>
+
+          {/* 2 */}
+          <div className="testimonial-card">
+            <div className="image-wrapper">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/848/848006.png"
+                alt="profile"
+              />
+              <div className="quote-icon">
+                <FaQuoteRight />
+              </div>
+            </div>
+            <p>
+              “The motion graphics training here is truly next-level. The hands-on
+              sessions helped me understand practical workflows used in real studios.”
+            </p>
+            <div className="star-rating">
+              {[...Array(5)].map((_, i) => (
+                <AiFillStar key={i} />
+              ))}
+            </div>
+            <h3>Arun Kumar</h3>
+            <span>Motion Graphics Student</span>
+          </div>
+
+          {/* 3 */}
+          <div className="testimonial-card">
+            <div className="image-wrapper">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/848/848006.png"
+                alt="profile"
+              />
+              <div className="quote-icon">
+                <FaQuoteRight />
+              </div>
+            </div>
+            <p>
+              “The VFX course at Monz Creative School is well-structured. The
+              studio-style environment and guidance helped me build a strong
+              professional portfolio.”
+            </p>
+            <div className="star-rating">
+              {[...Array(5)].map((_, i) => (
+                <AiFillStar key={i} />
+              ))}
+            </div>
+            <h3>Divya Ramesh</h3>
+            <span>VFX Student</span>
+          </div>
+
+          {/* 4 */}
+          <div className="testimonial-card">
+            <div className="image-wrapper">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/848/848006.png"
+                alt="profile"
+              />
+              <div className="quote-icon">
+                <FaQuoteRight />
+              </div>
+            </div>
+            <p>
+              “The video editing course is incredibly detailed. The mentors explain
+              everything clearly, and I gained the confidence to work on client
+              projects.”
+            </p>
+            <div className="star-rating">
+              {[...Array(5)].map((_, i) => (
+                <AiFillStar key={i} />
+              ))}
+            </div>
+            <h3>Sanjay Prakash</h3>
+            <span>Video Editing Student</span>
+          </div>
+
+          {/* 5 */}
+          <div className="testimonial-card">
+            <div className="image-wrapper">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/848/848006.png"
+                alt="profile"
+              />
+              <div className="quote-icon">
+                <FaQuoteRight />
+              </div>
+            </div>
+            <p>
+              “Monz Creative School has an inspiring atmosphere. The design feedback
+              sessions helped me improve my creativity and design thinking skills.”
+            </p>
+            <div className="star-rating">
+              {[...Array(5)].map((_, i) => (
+                <AiFillStar key={i} />
+              ))}
+            </div>
+            <h3>Keerthana Murali</h3>
+            <span>Graphic Design Student</span>
+          </div>
+
+          {/* 6 */}
+          <div className="testimonial-card">
+            <div className="image-wrapper">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/848/848006.png"
+                alt="profile"
+              />
+              <div className="quote-icon">
+                <FaQuoteRight />
+              </div>
+            </div>
+            <p>
+              “The portfolio review sessions were extremely useful. Because of Monz
+              guidance, I secured an internship faster than expected.”
+            </p>
+            <div className="star-rating">
+              {[...Array(5)].map((_, i) => (
+                <AiFillStar key={i} />
+              ))}
+            </div>
+            <h3>Vikram Raj</h3>
+            <span>Animation Student</span>
+          </div>
+
         </div>
-      </div>
-      <p>
-        “Studying at Monz Creative School has completely transformed my
-        confidence. The trainers are supportive, and the teaching methods are
-        very practical and industry-focused.”
-      </p>
-      <div className="star-rating">
-        {[...Array(5)].map((_, i) => (
-          <AiFillStar key={i} />
-        ))}
-      </div>
-      <h3>Priya Chandran</h3>
-      <span>UI/UX Student</span>
-    </div>
-
-    {/* 2 */}
-    <div className="testimonial-card">
-      <div className="image-wrapper">
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/848/848006.png"
-          alt="profile"
-        />
-        <div className="quote-icon">
-          <FaQuoteRight />
-        </div>
-      </div>
-      <p>
-        “The motion graphics training here is truly next-level. The hands-on
-        sessions helped me understand practical workflows used in real studios.”
-      </p>
-      <div className="star-rating">
-        {[...Array(5)].map((_, i) => (
-          <AiFillStar key={i} />
-        ))}
-      </div>
-      <h3>Arun Kumar</h3>
-      <span>Motion Graphics Student</span>
-    </div>
-
-    {/* 3 */}
-    <div className="testimonial-card">
-      <div className="image-wrapper">
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/848/848006.png"
-          alt="profile"
-        />
-        <div className="quote-icon">
-          <FaQuoteRight />
-        </div>
-      </div>
-      <p>
-        “The VFX course at Monz Creative School is well-structured. The
-        studio-style environment and guidance helped me build a strong
-        professional portfolio.”
-      </p>
-      <div className="star-rating">
-        {[...Array(5)].map((_, i) => (
-          <AiFillStar key={i} />
-        ))}
-      </div>
-      <h3>Divya Ramesh</h3>
-      <span>VFX Student</span>
-    </div>
-
-    {/* 4 */}
-    <div className="testimonial-card">
-      <div className="image-wrapper">
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/848/848006.png"    
-          alt="profile"
-        />
-        <div className="quote-icon">
-          <FaQuoteRight />
-        </div>
-      </div>
-      <p>
-        “The video editing course is incredibly detailed. The mentors explain
-        everything clearly, and I gained the confidence to work on client
-        projects.”
-      </p>
-      <div className="star-rating">
-        {[...Array(5)].map((_, i) => (
-          <AiFillStar key={i} />
-        ))}
-      </div>
-      <h3>Sanjay Prakash</h3>
-      <span>Video Editing Student</span>
-    </div>
-
-    {/* 5 */}
-    <div className="testimonial-card">
-      <div className="image-wrapper">
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/848/848006.png"    
-          alt="profile"
-        />
-        <div className="quote-icon">
-          <FaQuoteRight />
-        </div>
-      </div>
-      <p>
-        “Monz Creative School has an inspiring atmosphere. The design feedback
-        sessions helped me improve my creativity and design thinking skills.”
-      </p>
-      <div className="star-rating">
-        {[...Array(5)].map((_, i) => (
-          <AiFillStar key={i} />
-        ))}
-      </div>
-      <h3>Keerthana Murali</h3>
-      <span>Graphic Design Student</span>
-    </div>
-
-    {/* 6 */}
-    <div className="testimonial-card">
-      <div className="image-wrapper">
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/848/848006.png"    
-          alt="profile"
-        />
-        <div className="quote-icon">
-          <FaQuoteRight />
-        </div>
-      </div>
-      <p>
-        “The portfolio review sessions were extremely useful. Because of Monz
-        guidance, I secured an internship faster than expected.”
-      </p>
-      <div className="star-rating">
-        {[...Array(5)].map((_, i) => (
-          <AiFillStar key={i} />
-        ))}
-      </div>
-      <h3>Vikram Raj</h3>
-      <span>Animation Student</span>
-    </div>
-
-  </div>
-</section>
+      </section>
 
 
- <section className="cta-section text-center">
+      <section className="cta-section text-center">
         <Container>
           <Row className="justify-content-center">
             <Col lg={8}>
@@ -859,7 +793,7 @@ export default function HomePage() {
             </Col>
           </Row>
         </Container>
-</section>
+      </section>
 
       <BranchAccordion />
       <Footer />

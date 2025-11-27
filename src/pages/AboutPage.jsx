@@ -9,6 +9,8 @@ import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import EnquireNow from "../components/EnquiryForm";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Menu from "../components/Menu";
+
 
 const About = () => {
   useEffect(() => {
@@ -17,7 +19,7 @@ const About = () => {
 
   return (
     <section className="about-page">
-      <section className="navbar-section shadow-sm py-3">
+      {/* <section className="navbar-section shadow-sm py-3">
         <Container>
           <Row className="align-items-center">
             <Col xs={6} md={3}>
@@ -115,7 +117,9 @@ const About = () => {
             </Col>
           </Row>
         </Container>
-      </section>
+      </section> */}
+
+      <Menu />
 
       <section className="about-hero-section d-flex align-items-center text-center text-light">
         <Container>
@@ -386,7 +390,7 @@ const About = () => {
                     <strong>One-Way Learning</strong>
                     <p>Our classrooms encourage creativity, not repetition.</p>
                   </li>
-                  <li>
+                  <li> 
                     <XCircleFill className="icon text-danger" />{" "}
                     <strong>No Industry Connection</strong>
                     <p>

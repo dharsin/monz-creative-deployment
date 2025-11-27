@@ -68,7 +68,7 @@
   position: relative;
   overflow: hidden;
   color: #fff;
-  min-height: 80vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   padding-bottom: 50px;
@@ -126,7 +126,6 @@
 /* ======= Enquiry Section ======= */
 .enquiry-section {
   position: relative;
-  padding-top: 20px;
   overflow: hidden;
   margin-top: -50px;
 }
@@ -142,6 +141,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.animatedform {
+  margin-left: 4rem;
 }
 
 .form-box {
@@ -196,7 +199,7 @@
   transform: translateY(-2px);
 }
 
-@media (max-width: 992px) {
+/* @media (max-width: 992px) {
   .banner-content h1 {
     font-size: 2.8rem;
   }
@@ -215,9 +218,9 @@
     width: 90%;
     margin: 0 auto;
   }
-}
+} */
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .banner-section {
     height: 70vh;
     flex-direction: column;
@@ -258,7 +261,7 @@
   .discount-text {
     font-size: 1rem;
   }
-}
+} */
 
 @media (max-width: 576px) {
   .banner-section {
@@ -304,6 +307,10 @@
   .submit-btn {
     font-size: 0.95rem;
   }
+
+  .animatedform {
+    margin-left: 0;
+  }
 }
 
 /* why monz*/
@@ -332,7 +339,7 @@
 }
 
 .monz-why-title {
-  font-size: 2.6rem;
+  font-size: 2.5rem;
   font-weight: 800;
   color: #ffce54;
   letter-spacing: 1.2px;
@@ -361,7 +368,7 @@
 
 .monz-why-card:hover {
   background: rgba(255, 255, 255, 0.18);
-  box-shadow: 0 12px 30px rgba(255, 206, 84, 0.3);
+  box-shadow: 0 12px 20px rgba(232, 48, 23, 0.3);
 }
 
 .monz-why-icon {
@@ -387,9 +394,11 @@
   .monz-why-section {
     padding: 60px 0;
   }
+
   .monz-why-title {
     font-size: 2rem;
   }
+
   .monz-why-card {
     padding: 25px;
   }
@@ -405,10 +414,8 @@
   background: #fff;
   border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 20px;
   text-align: center;
   transition: transform 0.3s ease;
-  height: 120%;
 }
 
 .course-card h3 {
@@ -423,8 +430,6 @@
 
 .course-img {
   width: 100%;
-  border-radius: 12px;
-  margin-bottom: 15px;
   height: 200px;
   object-fit: cover;
 }
@@ -480,8 +485,9 @@
   z-index: 2;
 }
 
-.students-gallery-heading, .creative-courses h2 {
-  font-size: 2.8rem;
+.students-gallery-heading,
+.creative-courses h2 {
+  font-size: 2.5rem;
   font-weight: 700;
   background: linear-gradient(90deg, #000, #c60202);
   -webkit-background-clip: text;
@@ -523,6 +529,7 @@
   .students-gallery-heading {
     font-size: 2rem;
   }
+
   .students-gallery-subtext {
     font-size: 1rem;
   }
@@ -670,7 +677,8 @@
 
 .branch-accordion {
   background-image: url("../public/images/homepage/branchbg.webp");
-  background-attachment: fixed; /* parallax effect */
+  background-attachment: fixed;
+  /* parallax effect */
   background-size: cover;
   background-position: center;
 
@@ -841,9 +849,11 @@
   .cta-heading {
     font-size: 1.8rem;
   }
+
   .cta-subtext {
     font-size: 1rem;
   }
+
   .cta-buttons {
     flex-direction: column;
     gap: 15px;
